@@ -424,6 +424,16 @@
     object-fit: cover;
     display: block;
   }
+  .profile-logo-overlay {
+  position: absolute !important;
+  bottom: 15px;
+  right: 15px;
+  width: 80px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  z-index: 10;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
 
   /* ===== Projects Grid ===== */
   .projects-grid {
@@ -848,6 +858,7 @@
     </div>
     <div class="about-image float">
       <img src="assets/profile.jpg" alt="Diego Knochenhauer">
+      <img src="assets/logo-black.png" alt="Logo" class="profile-logo-overlay">
     </div>
   </div>
 </section>
@@ -1007,10 +1018,10 @@
 
 <!-- Footer -->
 <footer>
-  <div class="footer-logo">
-    <img src="assets/logo-black.png" alt="Diego Knochenhauer">
-  </div>
-  <p>© 2025 Diego Knochenhauer. Crafted with purpose.</p>
+  <p style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+    <img src="assets/logo-small.png" alt="DK Logo" style="height: 24px; width: auto; opacity: 0.8;">
+    © 2025 Diego Knochenhauer. Crafted with purpose.
+  </p>
 </footer>
 
 <script>
