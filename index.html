@@ -15,6 +15,9 @@
 
 <title>Diego Knochenhauer - Business Strategy, Finance & Innovation</title>
 
+<!-- Favicon (Rocket Logo) -->
+<link rel="icon" type="image/png" href="assets/rocket.png">
+
 <!-- SEO Meta Tags -->
 <meta name="description" content="Diego Knochenhauer - Business Strategy, Finance, and Innovation. Business & Finance Student at Hult International Business School, Camp Counselor at Culver Military Academy, and Entrepreneur.">
 <meta name="keywords" content="Diego Knochenhauer, Business Strategy, Finance, Innovation, Hult Business School, Entrepreneur, Leadership, Camp Counselor, Model UN, Culver Military Academy, Gerdau">
@@ -24,11 +27,13 @@
 <meta property="og:title" content="Diego Knochenhauer - Business & Finance">
 <meta property="og:description" content="Business & Finance Student | Leader | Entrepreneur | Turning vision into value through strategic thinking">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/profile.jpg">
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Diego Knochenhauer">
 <meta name="twitter:description" content="Business & Finance Student | Leader | Entrepreneur">
+<meta name="twitter:image" content="assets/profile.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,13 +106,20 @@
   }
 
   .logo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    background: var(--gradient-3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  .logo img {
+    height: 45px;
+    width: auto;
+    filter: brightness(1.2);
   }
 
   .nav-links {
@@ -402,14 +414,15 @@
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 1;
-    background: var(--gradient-pastel-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.9);
     box-shadow: 0 20px 60px rgba(100,126,234,0.3);
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* ===== Projects Grid ===== */
@@ -598,8 +611,7 @@
     margin: 0 auto;
   }
 
-  /* Contact
-  Form Styles */
+  /* Contact Form Styles */
   .contact-form {
     max-width: 500px;
     margin: 2rem auto 3rem;
@@ -666,6 +678,20 @@
     font-size: 0.875rem;
   }
 
+  .footer-logo {
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo img {
+    height: 60px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-logo img:hover {
+    opacity: 1;
+  }
+
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
     .nav-links {
@@ -708,6 +734,10 @@
       width: 20px;
       height: 20px;
     }
+
+    .logo img {
+      height: 35px;
+    }
   }
 
   /* ===== Animations ===== */
@@ -742,7 +772,9 @@
 <!-- Navigation -->
 <nav id="navbar">
   <div class="nav-container">
-    <div class="logo">DK</div>
+    <a href="#home" class="logo">
+      <img src="assets/logo-gray.png" alt="Diego Knochenhauer Logo">
+    </a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -814,7 +846,9 @@
         <span class="badge">🗣️ English & Spanish</span>
       </div>
     </div>
-    <div class="about-image float">DK</div>
+    <div class="about-image float">
+      <img src="assets/profile.jpg" alt="Diego Knochenhauer">
+    </div>
   </div>
 </section>
 
@@ -834,8 +868,8 @@
       <div class="project-icon">🏕️</div>
       <h3>Culver Military Academy</h3>
       <p>Camp Counselor leading 36 campers in a 6-week leadership program. Developed engaging educational activities fostering growth, discipline, and duty in a 1,500+ person camp environment.</p>
-    </div>
-    <div class="project-card">
+    </div
+        <div class="project-card">
       <div class="project-icon">🏢</div>
       <h3>Gerdau - Executive Assistant</h3>
       <p>Coordinated executive communications, planned corporate events and conferences, and prepared strategic reports and presentations for C-level executives at a Fortune 500 company.</p>
@@ -948,8 +982,7 @@
   </div>
   <div class="contact-container">
     <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">
-      Whether you're looking to collaborate on a project, seeking strategic insights
-      , or just want to connect, I'm always open to meaningful conversations.
+      Whether you're looking to collaborate on a project, seeking strategic insights, or just want to connect, I'm always open to meaningful conversations.
     </p>
     
     <!-- Contact Form -->
@@ -974,6 +1007,9 @@
 
 <!-- Footer -->
 <footer>
+  <div class="footer-logo">
+    <img src="assets/logo-black.png" alt="Diego Knochenhauer">
+  </div>
   <p>© 2025 Diego Knochenhauer. Crafted with purpose.</p>
 </footer>
 
@@ -1111,34 +1147,6 @@
         heroBg.style.transform = `translateY(${scrolled * 0.2}px)`;
       }
     }
-  });
-
-  // ===== Typing Effect =====
-  function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    const originalText = text;
-    element.textContent = '';
-    
-    function type() {
-      if (i < text.length) {
-        element.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      }
-    }
-    
-    type();
-  }
-
-  // Apply to hero title on load - DISABLED to show content immediately
-  window.addEventListener('load', () => {
-    // Typing effect disabled - content shows immediately
-    // Uncomment below to enable typing effect:
-    // const heroTitle = document.querySelector('.hero h1');
-    // if (heroTitle) {
-    //   const originalText = heroTitle.textContent;
-    //   typeWriter(heroTitle, originalText, 60);
-    // }
   });
 
   // ===== Console Easter Egg =====
