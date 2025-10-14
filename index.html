@@ -3,10 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diego Knochenhauer</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P0BW7VPT59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P0BW7VPT59');
+</script>
+
+<title>Diego Knochenhauer - Business Strategy, Finance & Innovation</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Diego Knochenhauer - Business Strategy, Finance, and Innovation. Business & Finance Student at Hult International Business School, Camp Counselor, and Entrepreneur.">
+<meta name="keywords" content="Diego Knochenhauer, Business Strategy, Finance, Innovation, Hult Business School, Entrepreneur, Leadership, Camp Counselor, Model UN">
+<meta name="author" content="Diego Knochenhauer">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Diego Knochenhauer - Business & Finance">
+<meta property="og:description" content="Business & Finance Student | Leader | Entrepreneur | Turning vision into value through strategic thinking">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://diegoknochenhauer.com">
+<meta property="og:image" content="https://diegoknochenhauer.com/assets/og-image.jpg">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diego Knochenhauer">
+<meta name="twitter:description" content="Business & Finance Student | Leader | Entrepreneur">
+<meta name="twitter:image" content="https://diegoknochenhauer.com/assets/og-image.jpg">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
 <style>
   /* ===== Variables ===== */
   :root {
@@ -211,6 +242,7 @@
     border: none;
     position: relative;
     overflow: hidden;
+    font-family: inherit;
   }
 
   .btn-primary {
@@ -286,6 +318,26 @@
     font-size: 1.125rem;
     line-height: 1.7;
     color: rgba(255,255,255,0.8);
+  }
+
+  .about-text strong {
+    color: rgba(255,255,255,0.95);
+    font-weight: 600;
+  }
+
+  .nationality-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    padding: 0.5rem 1rem;
+    background: rgba(100,126,234,0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(100,126,234,0.3);
   }
 
   .about-image {
@@ -422,6 +474,13 @@
     margin-bottom: 0.5rem;
   }
 
+  .skill-card p {
+    color: var(--gray);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    min-height: 40px;
+  }
+
   .skill-level {
     display: flex;
     gap: 0.25rem;
@@ -449,11 +508,68 @@
     margin: 0 auto;
   }
 
+  /* Contact Form Styles */
+  .contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 0 3px rgba(0,113,227,0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  #form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    min-height: 24px;
+  }
+
   .social-links {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .social-link {
@@ -468,6 +584,7 @@
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 1.25rem;
   }
 
   .social-link:hover {
@@ -504,6 +621,14 @@
     .btn {
       width: 100%;
       justify-content: center;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -543,7 +668,7 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -566,239 +691,5 @@
 <!-- About Section -->
 <section id="about">
   <div class="section-header">
-    <h2>About Me</h2>
-    <p class="section-subtitle">Turning vision into value through strategic thinking and innovation</p>
-  </div>
-  <div class="about-content">
-    <div class="about-text">
-      <p>I'm a business management and finance student with a passion for building ventures that matter. My approach combines analytical rigor with creative problem-solving to identify opportunities and create sustainable growth.</p>
-      <br>
-      <p>Through my work with Infinity Kapital and various entrepreneurial projects, I focus on empowering the next generation of business leaders with the knowledge and tools they need to succeed in today's dynamic economy.</p>
-    </div>
-    <div class="about-image float">DK</div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-  <div class="section-header">
-    <h2>Featured Projects</h2>
-    <p class="section-subtitle">Building tomorrow's solutions today</p>
-  </div>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-icon">💼</div>
-      <h3>Infinity Kapital</h3>
-      <p>A comprehensive finance education platform focused on disciplined investing strategies and wealth-building principles for young entrepreneurs.</p>
-      <a href="#" class="project-link">Learn more →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">📱</div>
-      <h3>Content Creation</h3>
-      <p>Building an engaged community across TikTok and Instagram with content on productivity, entrepreneurship, and personal development.</p>
-      <a href="#" class="project-link">View content →</a>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">📊</div>
-      <h3>Business Analysis</h3>
-      <p>Strategic consulting and analysis for startups and student ventures, focusing on market positioning and growth optimization.</p>
-      <a href="#" class="project-link">Case studies →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-  <div class="section-header">
-    <h2>Core Competencies</h2>
-    <p class="section-subtitle">Expertise that drives results</p>
-  </div>
-  <div class="skills-container">
-    <div class="skill-card">
-      <div class="skill-icon">📈</div>
-      <h3>Finance & Analysis</h3>
-      <div class="skill-level">
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🚀</div>
-      <h3>Entrepreneurship</h3>
-      <div class="skill-level">
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot"></span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon">🎯</div>
-      <h3>Strategic Planning</h3>
-      <div class="skill-level">
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot active"></span>
-        <span class="skill-dot"></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="section-header">
-    <h2>Let's Connect</h2>
-    <p class="section-subtitle">Ready to create something extraordinary together</p>
-  </div>
-  <div class="contact-container">
-    <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">
-      Whether you're looking to collaborate on a project, seeking strategic insights, or just want to connect, I'm always open to meaningful conversations.
-    </p>
-    <div class="social-links">
-      <a href="https://instagram.com/diegoknochenhauer" target="_blank" class="social-link">📷</a>
-      <a href="https://linkedin.com/in/diegoknochenhauer" target="_blank" class="social-link">💼</a>
-      <a href="https://tiktok.com/@diegoknochenhauer" target="_blank" class="social-link">🎵</a>
-      <a href="mailto:contact@diegoknochenhauer.store" class="social-link">✉️</a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>© 2025 Diego Knochenhauer. Crafted with purpose.</p>
-</footer>
-
-<script>
-  // ===== Smooth Scroll Reveal =====
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('section:not(.hero)').forEach(section => {
-    observer.observe(section);
-  });
-
-  // ===== Navigation Scroll Effect =====
-  const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    
-    lastScroll = currentScroll;
-  });
-
-  // ===== Smooth Scroll for Navigation Links =====
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  // ===== Cursor Glow Effect (Desktop Only) =====
-  const cursorGlow = document.getElementById('cursorGlow');
-  let mouseX = 0, mouseY = 0;
-  let glowX = 0, glowY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateCursor() {
-    glowX += (mouseX - glowX) * 0.1;
-    glowY += (mouseY - glowY) * 0.1;
-    
-    cursorGlow.style.left = glowX - 200 + 'px';
-    cursorGlow.style.top = glowY - 200 + 'px';
-    
-    requestAnimationFrame(animateCursor);
-  }
-
-  // Only enable on desktop
-  if (window.innerWidth > 768) {
-    animateCursor();
-  } else {
-    cursorGlow.style.display = 'none';
-  }
-
-  // ===== Dynamic Project Cards =====
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0) scale(1)';
-    });
-  });
-
-  // ===== Parallax Effect on Hero =====
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero-content');
-    const heroBg = document.querySelector('.hero-bg');
-    
-    if (hero && scrolled < window.innerHeight) {
-      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-      hero.style.opacity = 1 - scrolled / window.innerHeight;
-      if (heroBg) {
-        heroBg.style.transform = `translateY(${scrolled * 0.2}px)`;
-      }
-    }
-  });
-
-  // ===== Typing Effect (Optional Enhancement) =====
-  function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-      if (i < text.length) {
-        element.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      }
-    }
-    
-    type();
-  }
-
-  // Apply to hero title on load
-  window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero h1');
-    if (heroTitle) {
-      const originalText = heroTitle.textContent;
-      typeWriter(heroTitle, originalText, 60);
-    }
-  });
-</script>
-
-</body>
-</html>
+    <h2
 
