@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0A0F1A">
+<meta name="theme-color" content="#ffffff">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0BW7VPT59"></script>
 <script>
@@ -14,11 +14,12 @@
 </script>
 
 <title>NVIDIA equity valuation — Diego Knochenhauer</title>
+<link rel="icon" type="image/svg+xml" href="../assets/mark.svg">
 <link rel="icon" type="image/png" href="../assets/rocket.png">
+<link rel="apple-touch-icon" href="../assets/rocket.png">
 <meta name="description" content="A DCF and comparable company valuation of NVIDIA, built to test how sensitive equity value is to growth, margin and terminal assumptions.">
 <meta name="author" content="Diego Knochenhauer">
 <link rel="canonical" href="https://diegoknochenhauer.store/research/nvidia-valuation.html">
-
 <meta property="og:title" content="NVIDIA equity valuation — Diego Knochenhauer">
 <meta property="og:description" content="A DCF and comparable company valuation of NVIDIA, built to test how sensitive equity value is to growth, margin and terminal assumptions.">
 <meta property="og:type" content="article">
@@ -35,154 +36,64 @@
   "headline": "NVIDIA equity valuation",
   "description": "A DCF and comparable company valuation of NVIDIA, built to test how sensitive equity value is to growth, margin and terminal assumptions.",
   "author": { "@type": "Person", "name": "Diego Knochenhauer", "url": "https://diegoknochenhauer.store/" },
-  "isPartOf": { "@type": "CreativeWorkSeries", "name": "Applied Finance & Risk Analysis" },
+  "isPartOf": { "@type": "CreativeWorkSeries", "name": "Independent research" },
   "url": "https://diegoknochenhauer.store/research/nvidia-valuation.html"
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/dk.css">
 </head>
-<body data-root="../">
-
-<div class="grid-bg" aria-hidden="true"></div>
+<body>
 <div id="progress" aria-hidden="true"></div>
 
-<header class="site" id="siteHeader">
+<header class="nav">
   <div class="nav-row">
-    <a href="../index.html" class="brand">
-      <img src="../assets/logo-small.png" alt="">
-      <span class="brand-name">Diego Knochenhauer</span>
-    </a>
-    <nav aria-label="Sections">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
-        <li><a href="../index.html#research" class="active">Research</a></li>
-        <li><a href="../index.html#capabilities">Capabilities</a></li>
-        <li><a href="../index.html#background">Background</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-tools">
-      <button class="icon-btn" id="cmdkBtn" aria-label="Open command menu">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5 1.5-1.5-5-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
-        <span>Jump to</span><span class="kbd">&#8984;K</span>
-      </button>
-      <button class="icon-btn" id="themeBtn" aria-label="Switch colour theme">
-        <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
-      </button>
-      <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-      </button>
-    </div>
+    <a href="../index.html" class="brand" aria-label="Diego Knochenhauer, home"><img src="../assets/logo-dark.svg" alt="DK"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#profile">Profile</a></li>
+      <li><a href="../index.html#leadership">Leadership</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#research" class="active">Research</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#credentials">Credentials</a></li>
+      <li><a href="../index.html#personal">Personal</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cv" href="../assets/Diego-Knochenhauer-CV.pdf?v=2" download="Diego-Knochenhauer-CV.pdf">Download CV</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
   </div>
 </header>
 
-<div class="drawer" id="drawer">
-  <div class="drawer-scrim" data-close></div>
-  <div class="drawer-panel">
-    <button class="icon-btn drawer-close" data-close aria-label="Close menu">
-      <svg viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-    </button>
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#experience">Experience</a>
-    <a href="../index.html#research">Research</a>
-    <a href="../index.html#capabilities">Capabilities</a>
-    <a href="../index.html#background">Background</a>
-    <a href="../index.html#contact">Contact</a>
-  </div>
-</div>
-
-<main class="paper">
-  <div class="wrap">
-    <p class="crumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#research">Research</a><span>/</span>NVIDIA equity valuation</p>
-
-    <div class="paper-head">
-      <span class="paper-kicker mono">Applied Finance &amp; Risk Analysis / 01</span>
+<main>
+  <section class="paper-hero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#research">Research</a><span>/</span>NVIDIA equity valuation</nav>
+      <p class="paper-kicker">Independent research, paper 1 of 3</p>
       <h1>NVIDIA equity valuation</h1>
       <p class="stand">A discounted cash flow model cross-checked against trading comparables, built to find out how much of the equity value rests on assumptions rather than on cash already being earned.</p>
+      <dl class="spec"><div><dt>Methods</dt><dd>DCF (FCFF), trading comparables</dd></div><div><dt>Discount rate</dt><dd>WACC via CAPM build-up</dd></div><div><dt>Scenarios</dt><dd>Bear, base, bull</dd></div><div><dt>Tools</dt><dd>Excel, Python</dd></div><div><dt>Period</dt><dd>2025 – 2026</dd></div></dl>
     </div>
+  </section>
 
-    <dl class="spec"><div><dt>Methods</dt><dd>DCF (FCFF), trading comparables</dd></div><div><dt>Discount rate</dt><dd>WACC via CAPM build-up</dd></div><div><dt>Scenarios</dt><dd>Bear / base / bull</dd></div><div><dt>Tools</dt><dd>Excel, Python</dd></div><div><dt>Period</dt><dd>2025 &ndash; 2026</dd></div><div><dt>Status</dt><dd>Independent research</dd></div></dl>
-
-    <article class="prose">
-
+  <section class="paper-body">
+    <div class="wrap">
+      <article class="prose">
 <h2>The question</h2>
-<p>
-  NVIDIA is the hardest kind of company to value: almost everything that matters is in the future.
-  The debate around it tends to collapse into two slogans &mdash; that it is obviously overpriced,
-  or that demand justifies any multiple. Neither is an argument, because neither one names the
-  assumption it depends on.
-</p>
-<p>
-  So the question I set was narrower and answerable: <strong>what would have to be true for the
-  current price to make sense on cash flows alone</strong>, and how much does the answer move when
-  each of those conditions is relaxed?
-</p>
+<p>NVIDIA is the hardest kind of company to value: almost everything that matters is in the future. The debate around it tends to collapse into two slogans: that it is obviously overpriced, or that demand justifies any multiple. Neither is an argument, because neither one names the assumption it depends on.</p>
+<p>So the question I set was narrower and answerable: <strong>what would have to be true for the current price to make sense on cash flows alone</strong>, and how much does the answer move when each of those conditions is relaxed?</p>
 
 <h2>Method</h2>
 <ol class="steps">
-  <li>
-    <h3>Build the free cash flow to firm</h3>
-    <p>
-      Start from projected EBIT, tax it at the effective rate, add back depreciation and
-      amortisation, then subtract capital expenditure and the change in net working capital.
-      This gives the cash available to all capital providers, which is what a WACC-discounted
-      model requires &mdash; mixing FCFF with a cost-of-equity discount rate is the most common
-      way to get a DCF quietly wrong.
-    </p>
-  </li>
-  <li>
-    <h3>Project the explicit forecast period</h3>
-    <p>
-      Revenue is driven by segment rather than as a single blended growth rate, since the
-      segments are not remotely similar businesses. Operating margin is projected as a path
-      rather than a constant, because a margin held flat at a cyclical peak is an assumption
-      disguised as an input.
-    </p>
-  </li>
-  <li>
-    <h3>Build the discount rate</h3>
-    <p>
-      Cost of equity from CAPM; after-tax cost of debt from the effective borrowing rate;
-      weighted at market values rather than book values. Market weighting matters here &mdash;
-      for a company whose equity market value dwarfs its debt, book weighting materially
-      understates the cost of capital.
-    </p>
-  </li>
-  <li>
-    <h3>Set the terminal value, then cross-check it</h3>
-    <p>
-      Terminal value via the Gordon growth method, with an exit-multiple calculation run
-      alongside it purely as a sanity check. If the two disagree badly, the terminal growth
-      rate is doing work it shouldn't be.
-    </p>
-  </li>
-  <li>
-    <h3>Bridge enterprise value to per-share equity value</h3>
-    <p>
-      Subtract debt, add cash and equivalents, then divide by diluted shares outstanding
-      rather than basic &mdash; stock-based compensation is a real claim on the equity and
-      ignoring it flatters the result.
-    </p>
-  </li>
-  <li>
-    <h3>Benchmark against comparables</h3>
-    <p>
-      A peer set screened on business model and end-market rather than on sector label alone,
-      compared on forward EV/Revenue, EV/EBITDA and P/E. The comparables aren't a second
-      valuation; they're a check on whether the DCF output sits somewhere the market has ever
-      been willing to go.
-    </p>
-  </li>
+  <li><h3>Build the free cash flow to firm</h3><p>Start from projected EBIT, tax it at the effective rate, add back depreciation and amortisation, then subtract capital expenditure and the change in net working capital. This gives the cash available to all capital providers, which is what a WACC-discounted model requires. Mixing FCFF with a cost-of-equity discount rate is the most common way to get a DCF quietly wrong.</p></li>
+  <li><h3>Project the explicit forecast period</h3><p>Revenue is driven by segment rather than as a single blended growth rate, since the segments are not remotely similar businesses. Operating margin is projected as a path rather than a constant, because a margin held flat at a cyclical peak is an assumption disguised as an input.</p></li>
+  <li><h3>Build the discount rate</h3><p>Cost of equity from CAPM; after-tax cost of debt from the effective borrowing rate; weighted at market values rather than book values. Market weighting matters here: for a company whose equity market value dwarfs its debt, book weighting materially understates the cost of capital.</p></li>
+  <li><h3>Set the terminal value, then cross-check it</h3><p>Terminal value via the Gordon growth method, with an exit-multiple calculation run alongside it purely as a sanity check. If the two disagree badly, the terminal growth rate is doing work it shouldn't be.</p></li>
+  <li><h3>Bridge enterprise value to per-share equity value</h3><p>Subtract debt, add cash and equivalents, then divide by diluted shares outstanding rather than basic. Stock-based compensation is a real claim on the equity and ignoring it flatters the result.</p></li>
+  <li><h3>Benchmark against comparables</h3><p>A peer set screened on business model and end-market rather than on sector label alone, compared on forward EV/Revenue, EV/EBITDA and P/E. The comparables aren't a second valuation; they're a check on whether the DCF output sits somewhere the market has ever been willing to go.</p></li>
 </ol>
 
 <h3>The core relationships</h3>
-<div class="formula">
-<span class="cmt"># free cash flow to firm</span>
+<div class="formula"><span class="cmt"># free cash flow to firm</span>
 FCFF = EBIT &times; (1 &minus; t) + D&amp;A &minus; CapEx &minus; &Delta;NWC
 
 <span class="cmt"># weighted average cost of capital</span>
@@ -194,14 +105,10 @@ TV = FCFF&#8345; &times; (1 + g) / (WACC &minus; g)
 
 <span class="cmt"># equity bridge</span>
 Equity value = EV &minus; total debt + cash &amp; equivalents
-Per share    = Equity value / diluted shares
-</div>
+Per share    = Equity value / diluted shares</div>
 
 <h2>Model inputs</h2>
-<p>
-  These are the drivers the output is actually sensitive to. Everything else in the model is
-  either mechanical or immaterial.
-</p>
+<p>These are the drivers the output is actually sensitive to. Everything else in the model is either mechanical or immaterial.</p>
 <div class="tbl-wrap">
 <table class="data">
   <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th><th>Why it matters</th></tr></thead>
@@ -211,25 +118,14 @@ Per share    = Equity value / diluted shares
     <tr><td>Effective tax rate</td><td class="num">18%</td><td class="num">16%</td><td class="num">15%</td><td>Modest effect; included for completeness</td></tr>
     <tr><td>CapEx as % of revenue</td><td class="num">4.0%</td><td class="num">3.0%</td><td class="num">2.5%</td><td>Fabless model keeps this lower than peers</td></tr>
     <tr><td>WACC</td><td class="num">11.5%</td><td class="num">10.4%</td><td class="num">9.5%</td><td>Largest single lever on present value</td></tr>
-    <tr><td>Terminal growth (g)</td><td class="num">2.0%</td><td class="num">2.5%</td><td class="num">3.0%</td><td>Capped at long-run nominal GDP &mdash; above that the company eventually becomes the economy</td></tr>
+    <tr><td>Terminal growth (g)</td><td class="num">2.0%</td><td class="num">2.5%</td><td class="num">3.0%</td><td>Capped at long-run nominal GDP; above that the company eventually becomes the economy</td></tr>
   </tbody>
 </table>
 </div>
-
-<p>
-  Note that the margin assumption is deliberately a <em>path</em> that normalises downward even in the
-  bull case. Holding a cyclical-peak margin flat for five years is the single most common way this
-  model gets flattered, and it happens silently because a constant looks like a conservative choice.
-</p>
+<p>Note that the margin assumption is deliberately a <em>path</em> that normalises downward even in the bull case. Holding a cyclical-peak margin flat for five years is the single most common way this model gets flattered, and it happens silently because a constant looks like a conservative choice.</p>
 
 <h2>What the model returned</h2>
-<p>
-  Results are indexed to the base case at 100 rather than shown as a price per share. That is a
-  deliberate choice, not a hedge. A point estimate invites the reader to compare it against today's
-  quote and treat the gap as a recommendation &mdash; which is precisely the false precision this
-  model is not entitled to. Indexing keeps the attention on the spread between scenarios, which is
-  the part the model can actually defend.
-</p>
+<p>Results are indexed to the base case at 100 rather than shown as a price per share. That is a deliberate choice, not a hedge. A point estimate invites the reader to compare it against today's quote and treat the gap as a recommendation, which is precisely the false precision this model is not entitled to. Indexing keeps the attention on the spread between scenarios, which is the part the model can actually defend.</p>
 <div class="tbl-wrap">
 <table class="data">
   <thead><tr><th>Scenario</th><th>WACC</th><th>Terminal g</th><th>Implied value (base = 100)</th><th>Terminal value as % of PV</th></tr></thead>
@@ -240,56 +136,26 @@ Per share    = Equity value / diluted shares
   </tbody>
 </table>
 </div>
-<p>
-  The bear-to-bull spread runs roughly three-to-one. On a mature business that width would suggest a
-  broken model; here it is the honest answer, and it is why a single target number would have been
-  the least informative thing I could have published.
-</p>
-<p>
-  The final column is the one I did not expect. <strong>Terminal value's share of present value rises
-  as the case gets more bullish</strong> &mdash; 68% in the bear case, 81% in the bull. The optimistic
-  scenario is not better supported by near-term cash than the pessimistic one; it is
-  <em>less</em> supported, because faster growth pushes proportionally more of the value beyond the
-  forecast horizon. The most confident-sounding case rests on the least evidence.
-</p>
+<p>The bear-to-bull spread runs roughly three-to-one. On a mature business that width would suggest a broken model; here it is the honest answer, and it is why a single target number would have been the least informative thing I could have published.</p>
+<p>The final column is the one I did not expect. <strong>Terminal value's share of present value rises as the case gets more bullish</strong>: 68% in the bear case, 81% in the bull. The optimistic scenario is not better supported by near-term cash than the pessimistic one; it is <em>less</em> supported, because faster growth pushes proportionally more of the value beyond the forecast horizon. The most confident-sounding case rests on the least evidence.</p>
 
 <h3>Sensitivity: WACC against terminal growth</h3>
-<p>
-  The standard two-way grid, and the one that does most of the explaining. If a one-percentage-point
-  move in either axis swings the valuation by more than the gap between bear and bull, the model is
-  telling you the answer is dominated by the discount rate rather than by the business.
-</p>
+<p>The standard two-way grid, and the one that does most of the explaining. If a one-percentage-point move in either axis swings the valuation by more than the gap between bear and bull, the model is telling you the answer is dominated by the discount rate rather than by the business.</p>
 <div class="tbl-wrap">
 <table class="data">
   <thead><tr><th>WACC &darr; / terminal g &rarr;</th><th>2.0%</th><th>2.5%</th><th>3.0%</th></tr></thead>
   <tbody>
     <tr><td>9.4%</td><td class="num">109</td><td class="num">116</td><td class="num">123</td></tr>
-    <tr><td>10.4% &mdash; base</td><td class="num">95</td><td class="num">100</td><td class="num">106</td></tr>
+    <tr><td>10.4% (base)</td><td class="num">95</td><td class="num">100</td><td class="num">106</td></tr>
     <tr><td>11.4%</td><td class="num">84</td><td class="num">88</td><td class="num">92</td></tr>
   </tbody>
 </table>
 </div>
-<p>
-  Holding the cash flow projection constant and moving only the discount rate, a single percentage
-  point of WACC is worth <strong>+16% / &minus;12%</strong> of value. Terminal growth over the same
-  half-point steps moves it by roughly 5&ndash;6% per notch. The asymmetry is not a quirk: because
-  value scales with 1/(WACC &minus; g), cutting the discount rate widens the gap between the two and
-  compounds, while raising it narrows the gap and damps. The model is more sensitive to good news
-  about rates than to bad news &mdash; which is worth knowing before trusting a bull case built on a
-  falling-rate assumption.
-</p>
+<p>Holding the cash flow projection constant and moving only the discount rate, a single percentage point of WACC is worth <strong>+16% / &minus;12%</strong> of value. Terminal growth over the same half-point steps moves it by roughly 5&ndash;6% per notch. The asymmetry is not a quirk: because value scales with 1/(WACC &minus; g), cutting the discount rate widens the gap between the two and compounds, while raising it narrows the gap and damps. The model is more sensitive to good news about rates than to bad news, which is worth knowing before trusting a bull case built on a falling-rate assumption.</p>
 
-<div class="callout">
-  <b>The takeaway</b>
-  <p>
-    Three-quarters of the base-case value sits beyond the forecast horizon, and a one-point move in
-    the discount rate is worth more than the entire gap between a 10% and a 20% revenue CAGR. That
-    makes this, arithmetically, more a position on the cost of capital than a position on NVIDIA
-    &mdash; which is the opposite of how the stock is usually argued about.
-  </p>
-</div>
+<div class="callout"><b>Key finding</b><p>Three-quarters of the base-case value sits beyond the forecast horizon, and a one-point move in the discount rate is worth more than the entire gap between a 10% and a 20% revenue CAGR. That makes this, arithmetically, more a position on the cost of capital than a position on NVIDIA, which is the opposite of how the stock is usually argued about.</p></div>
 
-<h2>What the model can't tell you</h2>
+<h2>Limitations</h2>
 <ul class="limits">
   <li><strong>Terminal value dominance.</strong> When most of the present value sits in the terminal period, the DCF is mostly an opinion about the far future wearing the costume of a calculation.</li>
   <li><strong>Customer concentration.</strong> A small number of hyperscale buyers drive a large share of demand. A smooth revenue curve hides the fact that the risk is lumpy and correlated.</li>
@@ -298,50 +164,43 @@ Per share    = Equity value / diluted shares
   <li><strong>Beta is backward-looking.</strong> A historical beta describes how the stock behaved, not how risky the business is now.</li>
 </ul>
 
-<h2>What I'd change next time</h2>
-<p>
-  Two things. First, I'd run a reverse DCF alongside the forward one &mdash; solving for the growth
-  rate the current price implies is a cleaner way to frame the debate than defending a target of my
-  own. Second, I'd probability-weight the scenarios instead of presenting three equal cases, since
-  an unweighted bull case quietly invites the reader to anchor on it.
-</p>
+<h2>Next iteration</h2>
+<p>Two things. First, I'd run a reverse DCF alongside the forward one; solving for the growth rate the current price implies is a cleaner way to frame the debate than defending a target of my own. Second, I'd probability-weight the scenarios instead of presenting three equal cases, since an unweighted bull case quietly invites the reader to anchor on it.</p>
 
-    </article>
+      </article>
 
-    <nav class="paper-nav">
-      <a class="pn" href="fed-rate-policy.html"><b>Previous</b><span>Fed rate policy &amp; sector valuations</span></a>
-      <a class="pn next" href="coso-governance.html"><b>Next</b><span>Governance review against COSO</span></a>
-    </nav>
-  </div>
+      <nav class="paper-nav" aria-label="More research">
+        <a class="pn" href="fed-rate-policy.html"><small>Previous paper</small><span>Fed rate policy and sector valuations</span></a>
+        <a class="pn next" href="coso-governance.html"><small>Next paper</small><span>Governance review against COSO</span></a>
+      </nav>
+      <p class="more-papers"><a href="../index.html#research">All research</a> &nbsp;·&nbsp; <a href="../index.html">Back to home</a></p>
+    </div>
+  </section>
 </main>
 
-<footer class="site">
-  <div class="foot-row">
-    <span style="display:flex;align-items:center;gap:10px">
-      <img src="../assets/logo-small.png" alt="">
-      &copy; <span id="year">2026</span> Diego Knochenhauer
-    </span>
-    <span class="foot-links">
-      <a href="../index.html#research">All research</a>
-      <a href="mailto:knochenhauerdiego@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/diegoknochenhauer" target="_blank" rel="noopener">LinkedIn</a>
-    </span>
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <img src="../assets/logo-dark.svg" alt="DK">
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../index.html#profile">Profile</a>
+        <a href="../index.html#leadership">Leadership</a>
+        <a href="../index.html#research">Research</a>
+        <a href="nvidia-valuation.html">NVIDIA valuation</a>
+        <a href="coso-governance.html">COSO review</a>
+        <a href="fed-rate-policy.html">Fed rate cycles</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Diego Knochenhauer. Cambridge, MA.</span>
+      <nav class="foot-links" aria-label="Social">
+        <a href="https://linkedin.com/in/diegoknochenhauer" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:diegokvlv@gmail.com">Email</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
-<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Jump to section">
-  <div class="cmdk-scrim" data-cmdk-close></div>
-  <div class="cmdk-box">
-    <input class="cmdk-input" id="cmdkInput" placeholder="Jump to a section or action&#8230;" autocomplete="off">
-    <div class="cmdk-list" id="cmdkList"></div>
-    <div class="cmdk-foot mono"><span>&#8593;&#8595; navigate</span><span>&#8629; open</span><span>esc close</span></div>
-  </div>
-</div>
-
-<button id="toTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
-<script src="../assets/site.js"></script>
+<script src="../assets/dk.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0A0F1A">
+<meta name="theme-color" content="#ffffff">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0BW7VPT59"></script>
 <script>
@@ -14,11 +14,12 @@
 </script>
 
 <title>Governance review against COSO — Diego Knochenhauer</title>
+<link rel="icon" type="image/svg+xml" href="../assets/mark.svg">
 <link rel="icon" type="image/png" href="../assets/rocket.png">
+<link rel="apple-touch-icon" href="../assets/rocket.png">
 <meta name="description" content="A corporate governance structure evaluated component by component against the COSO Internal Control Integrated Framework, with deficiencies classified and ranked by residual risk.">
 <meta name="author" content="Diego Knochenhauer">
 <link rel="canonical" href="https://diegoknochenhauer.store/research/coso-governance.html">
-
 <meta property="og:title" content="Governance review against COSO — Diego Knochenhauer">
 <meta property="og:description" content="A corporate governance structure evaluated component by component against the COSO Internal Control Integrated Framework, with deficiencies classified and ranked by residual risk.">
 <meta property="og:type" content="article">
@@ -35,103 +36,54 @@
   "headline": "Governance review against COSO",
   "description": "A corporate governance structure evaluated component by component against the COSO Internal Control Integrated Framework, with deficiencies classified and ranked by residual risk.",
   "author": { "@type": "Person", "name": "Diego Knochenhauer", "url": "https://diegoknochenhauer.store/" },
-  "isPartOf": { "@type": "CreativeWorkSeries", "name": "Applied Finance & Risk Analysis" },
+  "isPartOf": { "@type": "CreativeWorkSeries", "name": "Independent research" },
   "url": "https://diegoknochenhauer.store/research/coso-governance.html"
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/dk.css">
 </head>
-<body data-root="../">
-
-<div class="grid-bg" aria-hidden="true"></div>
+<body>
 <div id="progress" aria-hidden="true"></div>
 
-<header class="site" id="siteHeader">
+<header class="nav">
   <div class="nav-row">
-    <a href="../index.html" class="brand">
-      <img src="../assets/logo-small.png" alt="">
-      <span class="brand-name">Diego Knochenhauer</span>
-    </a>
-    <nav aria-label="Sections">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
-        <li><a href="../index.html#research" class="active">Research</a></li>
-        <li><a href="../index.html#capabilities">Capabilities</a></li>
-        <li><a href="../index.html#background">Background</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-tools">
-      <button class="icon-btn" id="cmdkBtn" aria-label="Open command menu">
-        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5 1.5-1.5-5-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
-        <span>Jump to</span><span class="kbd">&#8984;K</span>
-      </button>
-      <button class="icon-btn" id="themeBtn" aria-label="Switch colour theme">
-        <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
-      </button>
-      <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-      </button>
-    </div>
+    <a href="../index.html" class="brand" aria-label="Diego Knochenhauer, home"><img src="../assets/logo-dark.svg" alt="DK"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#profile">Profile</a></li>
+      <li><a href="../index.html#leadership">Leadership</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#research" class="active">Research</a></li>
+      <li><a href="../index.html#education">Education</a></li>
+      <li><a href="../index.html#credentials">Credentials</a></li>
+      <li><a href="../index.html#personal">Personal</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cv" href="../assets/Diego-Knochenhauer-CV.pdf?v=2" download="Diego-Knochenhauer-CV.pdf">Download CV</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
   </div>
 </header>
 
-<div class="drawer" id="drawer">
-  <div class="drawer-scrim" data-close></div>
-  <div class="drawer-panel">
-    <button class="icon-btn drawer-close" data-close aria-label="Close menu">
-      <svg viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-    </button>
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#experience">Experience</a>
-    <a href="../index.html#research">Research</a>
-    <a href="../index.html#capabilities">Capabilities</a>
-    <a href="../index.html#background">Background</a>
-    <a href="../index.html#contact">Contact</a>
-  </div>
-</div>
-
-<main class="paper">
-  <div class="wrap">
-    <p class="crumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#research">Research</a><span>/</span>Governance review against COSO</p>
-
-    <div class="paper-head">
-      <span class="paper-kicker mono">Applied Finance &amp; Risk Analysis / 02</span>
+<main>
+  <section class="paper-hero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#research">Research</a><span>/</span>Governance review against COSO</nav>
+      <p class="paper-kicker">Independent research, paper 2 of 3</p>
       <h1>Governance review against COSO</h1>
-      <p class="stand">An internal control gap analysis of an anonymised mid-sized company, mapped to the COSO framework &mdash; and, more usefully, an attempt to rank the gaps by the exposure they leave open rather than by how easy they are to close.</p>
+      <p class="stand">An internal control gap analysis of an anonymised mid-sized company, mapped to the COSO framework, with the gaps ranked by the exposure they leave open rather than by how easy they are to close.</p>
+      <dl class="spec"><div><dt>Framework</dt><dd>COSO Internal Control, Integrated Framework</dd></div><div><dt>Scope</dt><dd>5 components, 17 principles</dd></div><div><dt>Subject</dt><dd>Anonymised mid-sized company</dd></div><div><dt>Tests</dt><dd>Design and operating effectiveness</dd></div><div><dt>Output</dt><dd>Ranked gap register</dd></div><div><dt>Period</dt><dd>2025 – 2026</dd></div></dl>
     </div>
+  </section>
 
-    <dl class="spec"><div><dt>Framework</dt><dd>COSO Internal Control &mdash; Integrated Framework</dd></div><div><dt>Scope</dt><dd>5 components, 17 principles</dd></div><div><dt>Subject</dt><dd>Anonymised mid-sized company</dd></div><div><dt>Tests</dt><dd>Design and operating effectiveness</dd></div><div><dt>Output</dt><dd>Ranked gap register</dd></div><div><dt>Period</dt><dd>2025 &ndash; 2026</dd></div><div><dt>Status</dt><dd>Independent research</dd></div></dl>
-
-    <article class="prose">
-
+  <section class="paper-body">
+    <div class="wrap">
+      <article class="prose">
 <h2>The question</h2>
-<p>
-  Listing control weaknesses is not hard. Any reasonably careful reader can generate a long list of
-  things an organisation isn't doing. The list is also close to useless on its own, because it gives
-  management no way to decide what to fix first &mdash; and a remediation plan that treats every gap
-  as equally urgent is a plan that gets abandoned.
-</p>
-<p>
-  The question I was actually interested in was the ordering: <strong>which gaps leave the most
-  exposure open, as distinct from which gaps are the most conspicuous</strong>. Those are very
-  often different gaps.
-</p>
+<p>Listing control weaknesses is not hard. Any reasonably careful reader can generate a long list of things an organisation isn't doing. The list is also close to useless on its own, because it gives management no way to decide what to fix first, and a remediation plan that treats every gap as equally urgent is a plan that gets abandoned.</p>
+<p>The question I was actually interested in was the ordering: <strong>which gaps leave the most exposure open, as distinct from which gaps are the most conspicuous</strong>. Those are very often different gaps.</p>
 
 <h2>Why COSO</h2>
-<p>
-  COSO is the framework most internal control work in the US is assessed against, including
-  management's assessment under Sarbanes-Oxley Section 404. It breaks internal control into five
-  components, which in turn resolve into seventeen principles. The value of using it here is that
-  it forces coverage: it is much harder to overlook an entire category of control when you are
-  walking a structured checklist than when you are reading a governance document looking for
-  problems.
-</p>
+<p>COSO is the framework most internal control work in the US is assessed against, including management's assessment under Sarbanes-Oxley Section 404. It breaks internal control into five components, which in turn resolve into seventeen principles. The value of using it here is that it forces coverage: it is much harder to overlook an entire category of control when you are walking a structured checklist than when you are reading a governance document looking for problems.</p>
 <div class="tbl-wrap wide">
 <table class="data">
   <thead><tr><th>Component</th><th>What it asks</th><th>Where gaps usually hide</th></tr></thead>
@@ -147,66 +99,20 @@
 
 <h2>Method</h2>
 <ol class="steps">
-  <li>
-    <h3>Map the existing structure onto the seventeen principles</h3>
-    <p>
-      Every documented control is assigned to the principle it is meant to support. Principles with
-      nothing mapped to them are the first finding &mdash; an uncovered principle is a gap by
-      definition, before any testing happens.
-    </p>
-  </li>
-  <li>
-    <h3>Separate design from operation</h3>
-    <p>
-      A control can fail in two different ways, and conflating them produces bad remediation. If a
-      control is <strong>badly designed</strong>, it would not catch the problem even if performed
-      perfectly. If it is <strong>badly operated</strong>, the design is sound but it isn't being
-      done consistently. The first needs a new control; the second needs supervision. Testing design
-      first avoids the trap of tightening enforcement on a control that was never going to work.
-    </p>
-  </li>
-  <li>
-    <h3>Classify severity</h3>
-    <p>
-      Using the standard three-tier scale &mdash; a <strong>deficiency</strong>, a
-      <strong>significant deficiency</strong> (serious enough to warrant attention by those
-      overseeing financial reporting), and a <strong>material weakness</strong> (a reasonable
-      possibility that a material misstatement would not be prevented or detected in time).
-      The distinction is about the magnitude of what could go undetected, not about how careless
-      the failure looks.
-    </p>
-  </li>
-  <li>
-    <h3>Score residual risk, not inherent risk</h3>
-    <p>
-      Inherent risk is the exposure before controls. Residual risk is what survives the controls
-      that do exist &mdash; and it is residual risk that should drive the ordering. A frightening
-      inherent risk with three overlapping compensating controls is a lower priority than a modest
-      one sitting completely uncovered.
-    </p>
-  </li>
-  <li>
-    <h3>Rank and sequence remediation</h3>
-    <p>
-      Residual risk sets the priority; effort and dependency set the sequence. Some fixes unlock
-      others &mdash; a documented delegation-of-authority matrix has to exist before approval
-      thresholds can be tested against anything.
-    </p>
-  </li>
+  <li><h3>Map the existing structure onto the seventeen principles</h3><p>Every documented control is assigned to the principle it is meant to support. Principles with nothing mapped to them are the first finding: an uncovered principle is a gap by definition, before any testing happens.</p></li>
+  <li><h3>Separate design from operation</h3><p>A control can fail in two different ways, and conflating them produces bad remediation. If a control is <strong>badly designed</strong>, it would not catch the problem even if performed perfectly. If it is <strong>badly operated</strong>, the design is sound but it isn't being done consistently. The first needs a new control; the second needs supervision. Testing design first avoids the trap of tightening enforcement on a control that was never going to work.</p></li>
+  <li><h3>Classify severity</h3><p>Using the standard three-tier scale: a <strong>deficiency</strong>, a <strong>significant deficiency</strong> (serious enough to warrant attention by those overseeing financial reporting), and a <strong>material weakness</strong> (a reasonable possibility that a material misstatement would not be prevented or detected in time). The distinction is about the magnitude of what could go undetected, not about how careless the failure looks.</p></li>
+  <li><h3>Score residual risk, not inherent risk</h3><p>Inherent risk is the exposure before controls. Residual risk is what survives the controls that do exist, and it is residual risk that should drive the ordering. A frightening inherent risk with three overlapping compensating controls is a lower priority than a modest one sitting completely uncovered.</p></li>
+  <li><h3>Rank and sequence remediation</h3><p>Residual risk sets the priority; effort and dependency set the sequence. Some fixes unlock others: a documented delegation-of-authority matrix has to exist before approval thresholds can be tested against anything.</p></li>
 </ol>
 
-<div class="formula">
-<span class="cmt"># the scoring that drives the ranking</span>
+<div class="formula"><span class="cmt"># the scoring that drives the ranking</span>
 Inherent risk  = <span class="term">likelihood</span> &times; <span class="term">impact</span>
 Residual risk  = Inherent risk &times; (1 &minus; control effectiveness)
-Priority       = Residual risk &divide; remediation effort   <span class="cmt"># highest first</span>
-</div>
+Priority       = Residual risk &divide; remediation effort   <span class="cmt"># highest first</span></div>
 
 <h2>The gap register</h2>
-<p>
-  This is the deliverable. The ordering is the point of it &mdash; the rows are sorted by residual
-  risk, not by component, so it reads as a work queue rather than as an audit checklist.
-</p>
+<p>This is the deliverable. The ordering is the point of it: the rows are sorted by residual risk, not by component, so it reads as a work queue rather than as an audit checklist.</p>
 <div class="tbl-wrap wide">
 <table class="data">
   <thead><tr><th>#</th><th>Component</th><th>Gap identified</th><th>Design or operating</th><th>Severity</th><th>Residual risk</th><th>Remediation</th></tr></thead>
@@ -219,14 +125,7 @@ Priority       = Residual risk &divide; remediation effort   <span class="cmt">#
   </tbody>
 </table>
 </div>
-
-<p>
-  Residual risk is scored on a 1&ndash;5 likelihood and impact scale, discounted by the effectiveness
-  of whatever control does exist. The ordering it produces is the argument of this page: finding 01
-  ranks first not because it is the most egregious on paper but because nothing else in the structure
-  compensates for it, while finding 05 sits last despite being a real deficiency because two adjacent
-  controls partially cover the same exposure.
-</p>
+<p>Residual risk is scored on a 1&ndash;5 likelihood and impact scale, discounted by the effectiveness of whatever control does exist. The ordering it produces is the argument of this page: finding 01 ranks first not because it is the most egregious on paper but because nothing else in the structure compensates for it, while finding 05 sits last despite being a real deficiency because two adjacent controls partially cover the same exposure.</p>
 
 <h3>Coverage by component</h3>
 <div class="tbl-wrap">
@@ -242,17 +141,9 @@ Priority       = Residual risk &divide; remediation effort   <span class="cmt">#
 </table>
 </div>
 
-<div class="callout">
-  <b>The takeaway</b>
-  <p>
-    The gaps that scored highest were not the ones that looked worst on the page. Controls that were
-    absent entirely were easy to spot and often low-exposure; the expensive ones were controls that
-    existed, were documented, and were quietly not being performed &mdash; because everyone,
-    including the people relying on them, believed they were.
-  </p>
-</div>
+<div class="callout"><b>Key finding</b><p>The gaps that scored highest were not the ones that looked worst on the page. Controls that were absent entirely were easy to spot and often low-exposure; the expensive ones were controls that existed, were documented, and were quietly not being performed, because everyone, including the people relying on them, believed they were.</p></div>
 
-<h2>What this review can't establish</h2>
+<h2>Limitations</h2>
 <ul class="limits">
   <li><strong>Documentation is not operation.</strong> Reviewing a control structure on paper tells you what should happen. Only testing a sample of transactions tells you what does.</li>
   <li><strong>Management override sits outside the framework.</strong> COSO explicitly acknowledges that a sufficiently senior person can circumvent almost any control. No gap register catches that.</li>
@@ -260,50 +151,43 @@ Priority       = Residual risk &divide; remediation effort   <span class="cmt">#
   <li><strong>A point in time.</strong> Control environments drift. A review is a photograph, and the organisation keeps moving after the shutter closes.</li>
 </ul>
 
-<h2>What I'd change next time</h2>
-<p>
-  I'd test a transaction sample rather than reviewing documentation alone &mdash; the single biggest
-  weakness of the exercise is that it assesses design far more confidently than operation. I'd also
-  map each gap to the specific financial statement assertion it threatens, which is what makes a
-  register legible to an auditor rather than just to management.
-</p>
+<h2>Next iteration</h2>
+<p>I'd test a transaction sample rather than reviewing documentation alone; the single biggest weakness of the exercise is that it assesses design far more confidently than operation. I'd also map each gap to the specific financial statement assertion it threatens, which is what makes a register legible to an auditor rather than just to management.</p>
 
-    </article>
+      </article>
 
-    <nav class="paper-nav">
-      <a class="pn" href="nvidia-valuation.html"><b>Previous</b><span>NVIDIA equity valuation</span></a>
-      <a class="pn next" href="fed-rate-policy.html"><b>Next</b><span>Fed rate policy &amp; sector valuations</span></a>
-    </nav>
-  </div>
+      <nav class="paper-nav" aria-label="More research">
+        <a class="pn" href="nvidia-valuation.html"><small>Previous paper</small><span>NVIDIA equity valuation</span></a>
+        <a class="pn next" href="fed-rate-policy.html"><small>Next paper</small><span>Fed rate policy and sector valuations</span></a>
+      </nav>
+      <p class="more-papers"><a href="../index.html#research">All research</a> &nbsp;·&nbsp; <a href="../index.html">Back to home</a></p>
+    </div>
+  </section>
 </main>
 
-<footer class="site">
-  <div class="foot-row">
-    <span style="display:flex;align-items:center;gap:10px">
-      <img src="../assets/logo-small.png" alt="">
-      &copy; <span id="year">2026</span> Diego Knochenhauer
-    </span>
-    <span class="foot-links">
-      <a href="../index.html#research">All research</a>
-      <a href="mailto:knochenhauerdiego@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/diegoknochenhauer" target="_blank" rel="noopener">LinkedIn</a>
-    </span>
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <img src="../assets/logo-dark.svg" alt="DK">
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../index.html#profile">Profile</a>
+        <a href="../index.html#leadership">Leadership</a>
+        <a href="../index.html#research">Research</a>
+        <a href="nvidia-valuation.html">NVIDIA valuation</a>
+        <a href="coso-governance.html">COSO review</a>
+        <a href="fed-rate-policy.html">Fed rate cycles</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Diego Knochenhauer. Cambridge, MA.</span>
+      <nav class="foot-links" aria-label="Social">
+        <a href="https://linkedin.com/in/diegoknochenhauer" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:diegokvlv@gmail.com">Email</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
-<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Jump to section">
-  <div class="cmdk-scrim" data-cmdk-close></div>
-  <div class="cmdk-box">
-    <input class="cmdk-input" id="cmdkInput" placeholder="Jump to a section or action&#8230;" autocomplete="off">
-    <div class="cmdk-list" id="cmdkList"></div>
-    <div class="cmdk-foot mono"><span>&#8593;&#8595; navigate</span><span>&#8629; open</span><span>esc close</span></div>
-  </div>
-</div>
-
-<button id="toTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
-<script src="../assets/site.js"></script>
+<script src="../assets/dk.js"></script>
 </body>
 </html>
